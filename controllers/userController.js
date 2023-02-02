@@ -44,12 +44,12 @@ module.exports = {
     deleteUser(req, res) {
         User.findOneAndDelete({ _id: req.params.userId })
             .then((user) => {
-                if (!user) {
-                    res.status(404).json({ message: 'No user with that ID' });
-                    return;
-                }
+                !user
+                    ? res.status(404).json({ message: 'No user with that ID' })
+                    : res.json({
+                        message: 'User deleted!'
+                    })
             })
-            .then(() => res.json({ message: 'User deleted!' }))
             .catch((err) => res.status(500).json(err));
     },
 
@@ -63,12 +63,12 @@ module.exports = {
                 runValidators: true
             })
             .then((user) => {
-                if (!user) {
-                    res.status(404).json({ message: 'No user with that ID' });
-                    return;
-                }
-            })
-            .then(() => res.json({ message: 'User updated!' }))
+                !user
+                    ? res.status(404).json({ message: 'No user with that ID' })
+                    : res.json({
+                        message: 'User updated!'
+                    })
+                })
             .catch((err) => res.status(500).json(err));
     },
 };
