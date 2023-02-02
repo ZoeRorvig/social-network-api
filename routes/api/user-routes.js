@@ -7,13 +7,13 @@ const {
     updateUser,
 } = require('../../controllers/userController');
 
-// /api/students
+// /api/users
 router
     .route('/')
     .get(getUsers)
     .post(createUser);
 
-// /api/students/:studentId
+// /api/users/:userId
 router
     .route('/:userId')
     .get(getSingleUser)
