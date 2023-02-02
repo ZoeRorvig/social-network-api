@@ -1,7 +1,7 @@
 {
   "name": "social-media-api",
   "version": "1.0.1",
-  "description": "Mongoose back-end project - Develop",
+  "description": "Mongoose back-end project",
   "main": "server.js",
   "scripts": {
     "start": "node server",
