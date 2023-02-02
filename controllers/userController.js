@@ -71,4 +71,12 @@ module.exports = {
                 })
             .catch((err) => res.status(500).json(err));
     },
+
+    // Add Friend
+    addFriend(req, res) {
+    },
+
+    // Remove Friend
+    removeFriend(req, res) {
+    },
 };
