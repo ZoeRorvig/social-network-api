@@ -33,7 +33,7 @@ module.exports = {
             });
     },
 
-    // create a New User
+    // Create a New User
     createUser(req, res) {
         User.create(req.body)
             .then((user) => res.json(user))
@@ -68,7 +68,7 @@ module.exports = {
                     : res.json({
                         message: 'User updated!'
                     })
-                })
+            })
             .catch((err) => res.status(500).json(err));
     },
 
@@ -76,7 +76,7 @@ module.exports = {
     addFriend(req, res) {
         User.findOneAndUpdate(
             { _id: req.params.userId },
-            { $addToSet: {friends: req.params.friendId} },
+            { $addToSet: { friends: req.params.friendId } },
             {
                 new: true,
                 runValidators: true
@@ -87,7 +87,7 @@ module.exports = {
                     : res.json({
                         message: 'Friend added!'
                     })
-                })
+            })
             .catch((err) => res.status(500).json(err));
     },
 
@@ -95,7 +95,7 @@ module.exports = {
     removeFriend(req, res) {
         User.findOneAndUpdate(
             { _id: req.params.userId },
-            { $pull: {friends: req.params.friendId} },
+            { $pull: { friends: req.params.friendId } },
             {
                 new: true,
                 runValidators: true
@@ -106,7 +106,7 @@ module.exports = {
                     : res.json({
                         message: 'Friend removed!'
                     })
-                })
+            })
             .catch((err) => res.status(500).json(err));
     },
 };
