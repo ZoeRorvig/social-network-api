@@ -36,6 +36,16 @@ module.exports = {
     // create a New Thought
     createThought(req, res) {
         Thought.create(req.body)
+            .then((thought) => {
+                return User.findOneAndUpdate(
+                    { _id: req.body.userId },
+                    { $push: { thoughts: thought._id } },
+                    {
+                        new: true,
+                        runValidators: true
+                    },
+                )
+            })
             .then((thought) => res.json(thought))
             .catch((err) => res.status(500).json(err));
     },
@@ -49,6 +59,16 @@ module.exports = {
                     : res.json({
                         message: 'Thought deleted!'
                     })
+            })
+            .then((thought) => {
+                return User.findOneAndUpdate(
+                    { thoughts: req.params.thoughtId },
+                    { $pull: { thoughts: req.params.thoughtId } },
+                    {
+                        new: true,
+                        runValidators: true
+                    },
+                )
             })
             .catch((err) => res.status(500).json(err));
     },
@@ -95,7 +115,7 @@ module.exports = {
     removeReaction(req, res) {
         Thought.findOneAndUpdate(
             { _id: req.params.thoughtId },
-            { $pull: { reactions: {reactionId: req.params.reactionId } } },
+            { $pull: { reactions: { reactionId: req.params.reactionId } } },
             {
                 new: true,
             })
