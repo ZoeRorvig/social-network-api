@@ -24,10 +24,10 @@ Features Include:
 - Run the following routes in Insomnia:
     - Friends:
         - `/api/users/:userId/friends/:friendId` (POST/DELETE)
-    - USERS:
+    - Users:
         - `/api/users` (GET ALL/POST)
         - `/api/users/:userId` (GET ONE/PUT/DELETE)
-    - REACTION:
+    - Reaction:
         - `/api/thoughts/:thoughtId/reactions` (POST)
         - `/api/thoughts/:thoughtId/reactions/:reactionId` (DELETE)
     - Thoughts:
