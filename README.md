@@ -9,10 +9,10 @@
 This is an API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list using Express.js, a MongoDB database, and the Mongoose ODM.
 
 Features Include:
-- [TEXT]
+- Ability to 
 
 ## Instructions
-- [TEXT]
+- Open 
 
 ## Visuals 
 
@@ -62,3 +62,11 @@ The following is a screenshot of UPDATE THOUGHT:
 The following is a screenshot of DELETE THOUGHT (DELETE USER is similar):
 
 ![screenshot](./images/delete-thought.PNG)
+
+The following is a screenshot of MongoDB - SocialDB.users:
+
+![screenshot](./images/users-socialDB.PNG)
+
+The following is a screenshot of MongoDB - SocialDB.thoughts:
+
+![screenshot](./images/users-socialDB.PNG)
