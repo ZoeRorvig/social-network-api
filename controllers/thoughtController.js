@@ -4,10 +4,8 @@ module.exports = {
     // Get All Thoughts
     getThoughts(req, res) {
         Thought.find()
-            .then(async (thoughts) => {
-                const thoughtObj = {
-                    thoughts,
-                };
+            .then((thoughts) => {
+                const thoughtObj = thoughts;
                 return res.json(thoughtObj);
             })
             .catch((err) => {
@@ -19,8 +17,7 @@ module.exports = {
     // Get a Single Thought
     getSingleThought(req, res) {
         Thought.findOne({ _id: req.params.thoughtId })
-            .lean()
-            .then(async (thought) =>
+            .then((thought) =>
                 !thought
                     ? res.status(404).json({ message: 'No thought with that ID' })
                     : res.json({

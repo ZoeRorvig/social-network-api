@@ -18,7 +18,7 @@ Features Include:
 
 The following is a link to a video demo:
 
-[Walkthrough Video](#)
+[Walkthrough Video](https://drive.google.com/file/d/1UAjVQW4YF9HPkzoRfwXon5bQTkiX-Kns/view)
 
 The following is a screenshot of...:
 
