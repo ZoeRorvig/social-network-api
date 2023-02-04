@@ -12,7 +12,20 @@ Features Include:
 - Ability to 
 
 ## Instructions
-- Open 
+- Open the "localhost:27017" connection on MongoDB Compass. 
+- Run "nodemon" in the terminal to start the application. 
+- Run the following routes in Insomnia:
+    - Friends:
+        - `/api/users/:userId/friends/:friendId` (POST/DELETE)
+    - USERS:
+        - `/api/users` (GET ALL/POST)
+        - `/api/users/:userId` (GET ONE/PUT/DELETE)
+    - REACTION:
+        - `/api/thoughts/:thoughtId/reactions` (POST)
+        - `/api/thoughts/:thoughtId/reactions/:reactionId` (DELETE)
+    - Thoughts:
+        - `/api/thoughts` (GET ALL/POST)
+        - `/api/thoughts/:thoughtId` (GET ONE/PUT/DELETE)
 
 ## Visuals 
 
