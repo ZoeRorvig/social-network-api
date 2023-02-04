@@ -9,7 +9,14 @@
 This is an API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list using Express.js, a MongoDB database, and the Mongoose ODM.
 
 Features Include:
-- Ability to 
+- Ability to add/delete friends. 
+- Ability to get/view all users and thoughts.
+- Ability to get/view individual users and thoughts.
+- Ability to add new users. 
+- Ability to create new thoughts tied to users. 
+- Ability to update user information and thoughts.
+- Ability to delete users and thoughts.  
+- Ability to add/delete reactions to thoughts. 
 
 ## Instructions
 - Open the "localhost:27017" connection on MongoDB Compass. 
@@ -82,4 +89,4 @@ The following is a screenshot of MongoDB - SocialDB.users:
 
 The following is a screenshot of MongoDB - SocialDB.thoughts:
 
-![screenshot](./images/users-socialDB.PNG)
+![screenshot](./images/thought-socialDB.PNG)
